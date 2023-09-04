@@ -27,76 +27,102 @@ namespace YearA_Final
         }
         public void PopulateCartView()
         {
-            // Clear the DataGridView;;
             dataGridCart.DataSource = null;
-
-            // Set the DataGridView's DataSource to the cart products
             dataGridCart.DataSource = Cart.products;
         }
         private void comboBoxChooseProduct_SelectedItemChanged(object sender, EventArgs e)
         {
             panelAddUserControl.Controls.Clear();
-            
-            if (comboBoxChooseProduct.SelectedItem.ToString() == eCategory.None.ToString())
-            {
-                panelAddUserControl.Controls.Clear();
-                comboBoxByCatgeory.Visible = false;
-            }
-            if (comboBoxChooseProduct.SelectedItem.ToString() == eCategory.Drinks.ToString())
-            {
-                panelAddUserControl.Controls.Clear();
-                comboBoxByCatgeory.Visible = true;
-                comboBoxByCatgeory.DataSource= Enum.GetValues(typeof(eDrinks));
-              
-            }
 
-            if (comboBoxChooseProduct.SelectedItem.ToString() == eCategory.Food.ToString())
+            switch (comboBoxChooseProduct.SelectedIndex)
             {
-                panelAddUserControl.Controls.Clear();
-                comboBoxByCatgeory.Visible = true;
-                comboBoxByCatgeory.DataSource = Enum.GetValues(typeof(eFood));
-                
-            }
-            PopulateCartView();
-
-        }
-
-        private void comboBoxByCatgeory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (comboBoxByCatgeory.SelectedIndex)
-            {
-                case (int)eFood.Choose:
-                    chooseHandle();
+                case (int)eCategory.Food:
+                    panelAddUserControl.Controls.Clear();
+                    foodCatHandle();
                     break;
-                case (int)eFood.Bread:
-                    breadHandle();                    
+                case (int)eCategory.Drinks:
+                    panelAddUserControl.Controls.Clear();
+                    drinksCatHandle();
                     break;
-                case (int)eFood.Chicken:
-                    chickenHandle();
+                case (int)eCategory.None:
+                    panelAddUserControl.Controls.Clear();
+                    comboBoxByCatgeory.Visible = false;
                     break;
                 default:
                     break;
             }
+
             PopulateCartView();
         }
+
+
+        private void comboBoxByCatgeory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (comboBoxChooseProduct.SelectedIndex == (int)eCategory.Food)
+            {
+                switch (comboBoxByCatgeory.SelectedItem.ToString())
+                {
+                    case "Choose":
+                        chooseHandle();
+                        break;
+                    case "Bread":
+                        breadHandle();
+                        break;
+                    case "Chicken":
+                        chickenHandle();
+                        break;
+                    default:
+                        break;
+
+                }
+            }
+            else if (comboBoxChooseProduct.SelectedIndex == (int)eCategory.Drinks)
+                {
+                    int selectedDrinkType = (int)comboBoxByCatgeory.SelectedItem;
+                    AddDrinks addDrinksControl = new AddDrinks(Cart.GetProductsByType<Drinks>(), selectedDrinkType);
+                    panelAddUserControl.Controls.Clear();
+                    panelAddUserControl.Controls.Add(addDrinksControl);
+                }
+       
+            PopulateCartView();
+        }
+
         private void chooseHandle()
         {
             panelAddUserControl.Controls.Clear();
 
         }
 
+        private void foodCatHandle()
+        {
+            comboBoxByCatgeory.Visible = true;
+            comboBoxByCatgeory.DataSource = Enum.GetValues(typeof(eFood));
+        }
+
+        private void drinksCatHandle()
+        {
+            comboBoxByCatgeory.Visible = true;
+            comboBoxByCatgeory.DataSource = Enum.GetValues(typeof(eDrinks));
+            panelAddUserControl.Controls.Clear();
+            BindingList<Drinks> drinksList = Cart.GetProductsByType<Drinks>();
+            int selectedDrinkType = (int)comboBoxByCatgeory.SelectedItem;
+            AddDrinks addDrinksControl = new AddDrinks(drinksList, selectedDrinkType);
+            addDrinksControl.BringToFront();
+            panelAddUserControl.Controls.Add(addDrinksControl);
+            dataGridCart.DataSource = drinksList;
+            dataGridCart.Refresh();
+
+        }
+
+
         private void chickenHandle()
         {
             panelAddUserControl.Controls.Clear();
             MessageBox.Show("Please pay attention, quantity in 100 Grams per unit.");
             BindingList<Chicken> chickenList = Cart.GetProductsByType<Chicken>();
-
-            // Create the AddChicken user control and pass the chickenList
             AddChicken addChickenControl = new AddChicken(chickenList);
-
-            // Add the user control to the panel
             panelAddUserControl.Controls.Add(addChickenControl);
-
             dataGridCart.DataSource = chickenList;
             dataGridCart.Refresh();
         }
@@ -104,6 +130,7 @@ namespace YearA_Final
         private void breadHandle()
         {
             panelAddUserControl.Controls.Clear();
+
         }
 
         private void ShopForm_Load(object sender, EventArgs e)

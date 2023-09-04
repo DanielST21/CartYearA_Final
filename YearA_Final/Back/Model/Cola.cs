@@ -13,7 +13,7 @@ namespace YearA_Final.Back.Model
     public bool IsCaffeinated { get; set; }
 
         public Cola(string name, string expiryDate, double price, int ml, string type, bool isDiet, bool isCaffeinated)
-                    : base(name, expiryDate, price, ml, type)
+                    : base(name, expiryDate, price, type)
         {
         IsDiet = isDiet;
         IsCaffeinated = isCaffeinated;
@@ -24,12 +24,12 @@ namespace YearA_Final.Back.Model
             double total;
             if (this.IsDiet == false)
             {
-                return total = this.Ml * 0.42;
+                return total = 500 * 0.42;
                 //return total;
             }
             else
             {
-                return total = this.Ml * 0.03;
+                return total = 500 * 0.03;
                // return total;
             }
             

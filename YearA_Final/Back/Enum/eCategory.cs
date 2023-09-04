@@ -10,7 +10,7 @@ namespace YearA_Final.Back.Enum
     {
         None,
         Food,
-        Drinks
+        Drinks 
 
     }
 }

@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YearA_Final.Back.Model;
 
 namespace YearA_Final.Back.Model
 {
     [Serializable]
-    public abstract class Drinks : Category
+    public class Drinks : Category
     {
-        public int Ml { get; set; }
         public  string Type { get; set; }
 
-        protected Drinks(string name, string expiryDate, double price, int ml, string type)
+        public Drinks(string name, string expiryDate, double price, string type)
             : base(name, expiryDate, price)
-        {
-            Ml = ml;            
+        {           
             Type = type;
         }
         public override double CalcCalories()

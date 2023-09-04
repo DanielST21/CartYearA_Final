@@ -12,9 +12,9 @@ namespace YearA_Final.Back.Model
         public bool EinGedi { get; set; }
         public bool MeyEden { get; set; }
 
-        public Water(string name, string expiryDate, double price, int ml, string type,
+        public Water(string name, string expiryDate, double price,string type,
             bool einGedi = false, bool meyEden = false)            
-            : base(name, expiryDate, price , ml, type)
+            : base(name, expiryDate, price, type)
         {
             EinGedi = einGedi;
             MeyEden = meyEden;

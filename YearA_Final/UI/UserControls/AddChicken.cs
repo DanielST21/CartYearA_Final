@@ -92,8 +92,8 @@ namespace YearA_Final.UI.UserControls
             timeNow = timeNow.AddDays(16);
             string formattedDate = timeNow.ToString("dd/MM/yy");
             textBoxExpDate.Text = formattedDate;
-            textBoxPrice.Text = "45 ₪ per 100g";
-            textBoxCalories.Text = "168 Calories per 100g";
+            textBoxPrice.Text = "45 ₪ (100g)";
+            textBoxCalories.Text = "168 Calories (100g)";
 
         }
         private void handleChickenWings()
@@ -102,7 +102,7 @@ namespace YearA_Final.UI.UserControls
             timeNow = timeNow.AddDays(10);
             string formattedDate = timeNow.ToString("dd/MM/yy");
             textBoxExpDate.Text = formattedDate;
-            textBoxPrice.Text = "25 ₪ per 100g";
+            textBoxPrice.Text = "25 ₪ (100g)";
             textBoxCalories.Text = "210 Calories per 100g";
 
         }
@@ -112,8 +112,8 @@ namespace YearA_Final.UI.UserControls
             timeNow = timeNow.AddDays(22);
             string formattedDate = timeNow.ToString("dd/MM/yy");
             textBoxExpDate.Text = formattedDate;
-            textBoxPrice.Text = "60 ₪ per 100g";
-            textBoxCalories.Text = "177 Calories per 100g";
+            textBoxPrice.Text = "60 ₪ (100g)";
+            textBoxCalories.Text = "177 Calories (100g)";
               
         }
 

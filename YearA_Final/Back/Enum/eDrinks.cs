@@ -8,6 +8,7 @@ namespace YearA_Final.Back.Enum
 {
     public enum eDrinks
     {
+        Choose,
         Water,
         Cola,
         Milk

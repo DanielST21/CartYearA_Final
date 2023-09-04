@@ -8,8 +8,8 @@ namespace YearA_Final.Back.Enum
 {
     public enum eWaterType
     {
-        None = 0,
-        EinGedi = 1,
-        MeyEden =2
+        None,
+        EinGedi,
+        MeyEden
     }
 }

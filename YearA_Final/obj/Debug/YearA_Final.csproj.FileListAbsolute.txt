@@ -22,3 +22,16 @@ C:\Users\Daniel\Documents\GitHub\CartYearA_Final\YearA_Final\obj\Debug\YearA_Fin
 C:\Users\Daniel\Documents\GitHub\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Documents\GitHub\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.exe
 C:\Users\Daniel\Documents\GitHub\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.pdb
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\bin\Debug\YearA_Final.exe.config
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\bin\Debug\YearA_Final.exe
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\bin\Debug\YearA_Final.pdb
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.csproj.AssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.Properties.Resources.resources
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.ShopForm.resources
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.UI.UserControls.AddWater.resources
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.UI.UserControls.AddChicken.resources
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.csproj.GenerateResource.cache
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.exe
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.pdb
+C:\Users\Daniel\Documents\GitHub\DolevVersions\CartYearA_Final\YearA_Final\obj\Debug\YearA_Final.UI.UserControls.AddDrinks.resources

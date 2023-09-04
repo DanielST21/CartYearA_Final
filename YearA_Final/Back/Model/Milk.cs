@@ -11,14 +11,14 @@ namespace YearA_Final.Back.Model
     {
         public double FatPercentage { get; set; }
 
-        public Milk(string name, string expiryDate, double price, int ml, string type, double fatPercentage)
-            : base(name, expiryDate, price, ml, type)
+        public Milk(string name, string expiryDate, double price, string type, double fatPercentage)
+            : base(name, expiryDate, price, type)
         {
             FatPercentage = fatPercentage;
         }
         public override double CalcCalories()
         {
-            return  this.FatPercentage * 2 * this.Ml;
+            return  this.FatPercentage * 2 * 500;
         }
     }
 }

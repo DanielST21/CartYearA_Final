@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 public enum eChickenType
 {
-    CHOOSE,
+    Choose,
     Breast,
     Wings,
     Thighs
-}
-
-public static class EnumExtensions
-{
-
 }

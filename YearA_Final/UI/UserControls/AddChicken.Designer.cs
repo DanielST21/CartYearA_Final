@@ -45,7 +45,7 @@
             this.comboBoxChickenType.FormattingEnabled = true;
             this.comboBoxChickenType.Location = new System.Drawing.Point(25, 30);
             this.comboBoxChickenType.Name = "comboBoxChickenType";
-            this.comboBoxChickenType.Size = new System.Drawing.Size(193, 21);
+            this.comboBoxChickenType.Size = new System.Drawing.Size(190, 21);
             this.comboBoxChickenType.TabIndex = 0;
             this.comboBoxChickenType.SelectedIndexChanged += new System.EventHandler(this.comboBoxChickenType_SelectedIndexChanged);
             // 
